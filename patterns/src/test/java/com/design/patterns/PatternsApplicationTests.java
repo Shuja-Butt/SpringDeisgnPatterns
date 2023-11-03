@@ -1,5 +1,7 @@
 package com.design.patterns;
 
+import com.design.patterns.prototype.ProtoFalse;
+import com.design.patterns.prototype.ProtoTrue;
 import com.design.patterns.singleton.SingA;
 import com.design.patterns.singleton.SingB;
 import org.junit.jupiter.api.Assertions;
@@ -19,6 +21,22 @@ class PatternsApplicationTests {
 	@Autowired
 	private SingB B;
 
+	@Autowired
+	private ProtoTrue true1;
+
+	@Autowired
+	private ProtoFalse false1;
+
+	@Autowired
+	private ProtoTrue true2;
+
+	@Autowired
+	private ProtoFalse false2;
+
+
+
+
+
 
 	@Test
 	void contextLoads() {
@@ -34,17 +52,25 @@ class PatternsApplicationTests {
 		Assertions.assertNotNull(C);
 		Assertions.assertSame(C,D);
 
-
 		Assertions.assertNotNull(A);
 		Assertions.assertSame(A,B);
 
 
 
+	}
 
 
 
 
+
+
+	@Test
+	public  void testPrototypes(){
+
+		Assertions.assertNotSame(true1, true2);
+		Assertions.assertSame(false1,false2);
 
 
 	}
 }
+

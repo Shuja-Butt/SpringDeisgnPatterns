@@ -1,5 +1,4 @@
 package com.design.patterns.prototype;
 
-public class protoFalse {
-
+public class ProtoTrue {
 }
